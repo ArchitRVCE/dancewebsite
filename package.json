@@ -1,0 +1,29 @@
+{
+  "name": "dance-webite",
+  "version": "1.0.0",
+  "description": "This is a popular dance academy",
+  "main": "app.js",
+  "scripts": {
+    "test": "nach_meri_rani"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArchitRVCE/dancewebsite.git"
+  },
+  "keywords": [
+    "Archit10"
+  ],
+  "author": "Archit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArchitRVCE/dancewebsite/issues"
+  },
+  "homepage": "https://github.com/ArchitRVCE/dancewebsite#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
