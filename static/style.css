@@ -137,5 +137,15 @@ height: 42px;
 #footer{
     background-color: black;
     height: 100px;
-
+    color: white;
+}
+#sponsors{
+    display: flex;
+    height: 120px;
+    max-width: 100px;
+    margin: auto
+}
+.spImage{
+    height: 80px;
+    margin: 20px;
 }
