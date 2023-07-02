@@ -2,11 +2,18 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = 8000;
+
 //creating body-parser for post request
 const bodyparse = require("body-parser");
+
+//testing body-parser
+app.use(bodyparse.urlencoded({extended: false}));
+app.use(bodyparse.json());
+
 //creating mongoose to store contact details
 const mongoose = require('mongoose');
 main().catch(err => console.log(err));
+
 //estabilish connection with dataBase
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/contactDance');
@@ -42,9 +49,10 @@ app.get('/contact',(req,res)=>{
 });
 
 app.post('/contact',(req,res)=>{
+    console.log("The name is ",req.body.name);
     var myData = new Contact(req.body);
     myData.save().then(()=>{
-        res.send("This item has been saved succesfully");
+        res.status(200).send("This item has been saved succesfully");
     }).catch(()=>{
         res.status(400).send("Item could not be saved.");
     })
